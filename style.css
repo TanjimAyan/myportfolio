@@ -1,0 +1,571 @@
+/*universal component start*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+.btn:hover{
+  transform-origin:bottom;
+  animation:button6 1s ease 1;
+}
+
+
+@keyframes button6{
+  0%{
+    transform:skewX(0deg);
+  }
+
+  20%{
+    transform:skewX(18deg);
+    border-radius:5px 15px 5px 15px;
+  }
+
+  40%{
+    transform:skewX(-14deg);
+    border-radius:12px 5px 12px 5px;
+  }
+
+  60%{
+    transform:skewX(8deg);
+    border-radius:5px 8px 5px 8px;
+  }
+
+  100%{
+    transform:skewX(0deg);
+    border-radius:5px 5px 5px 5px;
+  }
+}
+
+
+
+/*universal component end*/
+
+
+body{
+  background-color:#262626;
+  /*transition:1s ease transform;
+  transform-origin:left top;*/
+}
+
+.container-fluid{
+  transition:1s ease transform;
+  transform-origin:left top;
+}
+
+.vhScale{
+  position:fixed;
+  width:2px;
+  height:100vh;
+  background-color:blue;
+  top:0;
+  left:0;
+  z-index:9999999;
+  visibility:hidden;
+}
+
+
+.scroll-indicator{
+  content:'';
+  height:5px;
+  width:0%;
+  background-color:lime;
+  position:fixed;
+  top:2px;
+  left:0;
+  z-index:1;
+}
+
+
+
+#particles-js{
+  position:relative;
+}
+
+.particles-js-canvas-el{
+  height:100%;
+  width:100%;
+  position:absolute;
+  top: 0;
+}
+
+
+.logoLg{
+  text-shadow:0px 0px 10px #ff0080,
+              0px 0px 20px #ff0080,
+              0px 0px 30px #ff0080,
+              0px 0px 40px #ff0080,
+              0px 0px 50px #ff0080,
+              0px 0px 60px #ff0080,
+              0px 0px 70px #ff0080,
+              0px 0px 80px #ff0080,
+              0px 0px 90px #ff0080,
+              0px 0px 20px #ff0080,
+              0px 0px 100px #ff0080,
+              0px 0px 110px #ff0080,
+              0px 0px 120px #ff0080,
+              0px 0px 130px #ff0080;
+  font-weight:900;
+  font-size:200%;
+  font-family: 'Dancing Script', cursive;
+  color:white !important;
+}
+
+
+.navWrap{
+  border-bottom:2px solid white;
+}
+
+.about-sec > div h1{
+  color:#99004d !important;
+}
+
+
+.about-sec > div span{
+  color:white !important;
+}
+
+.about-sec > div button{
+  border:2px solid white;
+  color:white;
+}
+
+.intro-social-icon > div{
+  display:flex;
+}
+
+
+.intro-social-icon > div a{
+  border-radius:50%;
+  padding:7px 14px;
+  position:relative;
+}
+
+.intro-social-icon > div a:before{
+  position:absolute;
+  content:'';
+  left:0;
+  bottom:0;
+  right:0;
+  top:0;
+  height:100%;
+  width:100%;
+  background:linear-gradient(to right,#99004d 50%,transparent 50%);
+  border-radius:50%;
+  z-index:-1;
+  transform:rotate(45deg);
+  transform-origin:center center;
+  transition:transform 0.3s;
+}
+
+.intro-social-icon > div a:hover:before{
+  transform:rotate(405deg);
+}
+
+
+
+.percent{
+  position:relative;
+}
+
+.percent .number{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  transform:translateY(-15px);
+}
+
+.percent .number h2{
+  color:white !important;
+}
+
+.card .percent .text{
+  text-transform:uppercase;44
+  margin-top:15px;
+  color:white !important;
+}
+
+.percent .number h2{
+  color:black;
+}
+
+.percent .number span{
+  font-size:70%;
+}
+
+.percent .text{
+  color:black !important;
+}
+
+svg{
+  position:relative;
+  width:150px;
+  height:150px;
+  z-index:4;
+}
+
+svg circle{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:;
+  stroke-width:10;
+  stroke-linecap:round;
+  transform:translate(5px,5px);
+}
+
+svg circle:nth-child(2){
+  stroke-dasharray:440;
+  stroke-dashoffset:440;
+}
+
+.skills{
+  background-color:#262626;
+}
+
+.skills .s-card{
+  justify-content:center;
+  align-items:center;
+  border-radius:4px;
+  text-align:center;
+  padding:10px;
+}
+
+.s-card .card{
+  padding:20px 10px;
+  /*background-color:rgba(255,255,255,0.1);*/
+  border:2px solid black;
+  background-color:hsl(16, 100%, 45%);
+  transition:0.5s;
+  border:2px solid black;
+}
+
+.s-card .card:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color:#262626;
+  clip-path: polygon(53% 25%, 100% 0, 100% 100%, 0 100%, 36% 66%);
+}
+
+
+.s-card .card svg circle:nth-child(2){
+  stroke:white;
+}
+
+
+
+.s-card:nth-child(2) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;/*calc(440 - (440 * 90) / )*/
+}
+
+.s-card:nth-child(3) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+}
+
+.s-card:nth-child(4) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+}
+
+.s-card:nth-child(5) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+}
+
+.s-card:nth-child(6) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+  
+}
+
+.s-card:nth-child(7) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+}
+
+.s-card:nth-child(8) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+}
+
+.s-card:nth-child(9) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+}
+
+.s-card:nth-child(10) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+}
+
+.s-card:nth-child(11) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+}
+
+.s-card:nth-child(12) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+}
+
+.s-card:nth-child(13) .card svg circle:nth-child(2){
+  stroke-dashoffset:-44;
+}
+
+
+
+.s-sec{
+  background-color:#404040 !important;
+}
+
+
+
+.serv-sec{
+  background-color:#262626 !important;
+  border-top:2px solid black;
+}
+
+
+
+.serv-sec .card{
+  width:99%;
+  background-color:hsl(16, 100%, 45%);
+  display:flex;
+  align-items:center;
+  padding:30px 10px;
+}
+
+.serv-sec .card button{
+  border:2px solid #262626;
+  color:black;
+  z-index:1;
+}
+
+.serv-sec .card:before{
+  content:'';
+  position:absolute;
+  top:0;
+  height:96%;
+  width:98%;
+  margin:1%;
+  border:1px solid black;
+}
+
+.serv-sec .card .img-wrapper{
+  width:45%;
+  padding:15px;
+  border-radius:50%;
+  background-color:white;
+}
+
+.serv-sec .col{
+  display:flex;
+  justify-content:center;
+}
+
+
+.proj-sec{
+  background-color:#262626;
+  border-top:2px solid black;
+}
+
+.proj-sec .card{
+  width:99%;
+  height:450px;
+  background-color:white;
+  border-radius:0;
+  border:none;
+  margin-bottom:20px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+.proj-sec .card .img-wrapper{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.proj-sec .card .body{
+  background-color:hsl(16, 100%, 45%);/*
+  border-left:2px solid white;
+  border-right:2px solid white;
+  border-bottom:2px solid white;*/
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+
+.proj-sec .card .body h3{
+  color:white;
+}
+
+.proj-sec .card .body p{
+  text-align:center;
+}
+
+.proj-sec .card .body button{
+  color:black !important;
+  background-color:transparent !important;
+  border:2px solid #262626 !important;
+  margin-bottom:10px;
+}
+
+.proj-sec .card .img-wrapper img{
+    transform:transform:translateY(0%);
+    transition:transform 8s;
+}
+
+.proj-sec .card:hover .img-wrapper img{
+  transform:translateY(-60%);
+}
+
+.contact{
+  background-color:#262626;
+  border-top:2px solid black;
+  display:flex;
+  justify-content:center;
+}
+
+.contact h2{
+  text-align:center;
+  color:lightgreen;
+}
+
+.contact .contact-wrapper{
+  padding:0;
+  border:2px solid white;
+}
+
+.contact .contact-wrapper h2{
+  text-align:center;
+  color:white;
+  padding:20px 0px;
+}
+
+.contact div:first-child{
+  background-color:#262626;
+  color:white;
+}
+
+.cont-social-icon a{
+  text-decoration:none;
+  color:white;
+  border:2px solid black;
+  padding:7px 14px;
+  border-radius:50%;
+}
+
+.contact div:nth-child(2){
+  background-color:hsl(16, 100%, 45%);
+}
+
+.contact div:nth-child(2) form input{
+  border:2px solid black;
+  background-color:transparent;
+}
+
+.contact div:nth-child(2) form input:focus{
+  outline:none;
+  box-shadow:none;
+}
+
+.contact div:nth-child(2) form textarea{
+  background-color:transparent;
+  border:2px solid black;
+  box-shadow:none;
+}
+
+.contact div:nth-child(2) form label{
+  color:black;
+  border:none;
+}
+
+.contact div:nth-child(2) form button{
+  color:white !important;
+  background-color:#262626 !important;
+  border:none;
+}
+
+
+
+.footer{
+  border-top:2px solid black;
+}
+
+.footer .sec1{
+  display:flex;
+  justify-content:center;
+}
+
+.footer .sec1 a{
+  text-decoration:none;
+  text-align:center;
+}
+
+
+
+@media screen and (min-width:1200px){
+  
+}
+
+@media screen and (min-width:992px) and (max-width:1199px){
+  
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+  
+}
+
+@media screen and (min-width:540px) and (max-width:767px){
+  .p-img{
+    display:none;
+  }
+
+  .r-1-s-1{
+    background-image:url(images/img3.png);
+    background-repeat:no-repeat;
+    background-size:auto 100%;
+    background-position:center right;
+    margin-right:20px;
+  }
+
+  .intro-social-icon{
+    margin-bottom:20px;
+  }
+
+
+   .serv-sec div{
+    margin-bottom:10px !important;
+   }
+
+
+}
+
+@media screen and (max-width:575px){
+  .p-img{
+    display:none;
+  }
+
+  .r-1-s-1{
+    background-image:url(images/img3.png);
+    background-repeat:no-repeat;
+    background-size:auto 100%;
+    background-position:center right;
+    margin-right:15px;
+  }
+
+  .intro-social-icon{
+    margin-bottom:15px;
+  }
+
+
+  .serv-sec div{
+    margin-bottom:10px !important;
+   }
+
+
+}
